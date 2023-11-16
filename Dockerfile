@@ -15,7 +15,7 @@ RUN npm install
 COPY . .
 
 # Generar los archivos de construcción (dist)
-RUN npm run build -- --prod
+RUN npm run build -- --configuration=production
 
 # Etapa 2: Usar una imagen base de Nginx para servir la aplicación
 FROM nginx:alpine
